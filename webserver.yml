@@ -5,8 +5,10 @@
    - name: i want to install server on ubuntu
      apt:
          name: apache2
-         state: present 
+         state: present
+     when: ansible_os_family== "Debian"
    - name:
      service:
          name: apache2
          state: started 
+     when: ansible_os_family== "Debian"    
