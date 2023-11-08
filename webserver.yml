@@ -4,21 +4,21 @@
   tasks:
    - name: i want to install server on ubuntu
      apt:
-         name: "{{mywebpackonubuntu}}"
+         name: "{{mywebpackubuntu}}"
          state: present
      when: ansible_os_family== "Debian"
    - name:
      service:
-         name: "{{mywebpackonubuntu}}"
+         name: "{{mywebpackubuntu}}"
          state: started 
      when: ansible_os_family== "Debian" 
    - name: i want to install webserver on redhat
      dnf:
-          name: "{{mywebpackonredhat}}"
+          name: "{{mywebpackredhat}}"
           state: present
      when: ansible_os_family== "RedHat" 
    - name: i want to start webserver on redhat
      service:
-          name: "{{mywebpackonredhat}}"
+          name: "{{mywebpackredhat}}"
           state: started
      when: ansible_os_family== "RedHat"      
