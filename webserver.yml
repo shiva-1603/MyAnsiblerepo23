@@ -1,5 +1,5 @@
 ---
-- hosts: my webserver
+- hosts: mywebserver
   become: yes
   tasks:
    - name: i want to install server on ubuntu
