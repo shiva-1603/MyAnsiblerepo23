@@ -19,3 +19,8 @@
     get_url:
        url: https://archive.apache.org/dist/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20.tar.gz
        dest: /home/ubuntu/apache-tomcat-10.0.20.tar.gz
+  handlers:
+  - name: webserverrestart
+    service:
+       name: apache2
+       state: started     
