@@ -10,4 +10,4 @@
   - name: copy my index file into ansible node side
     copy:
        src: myindexfile
-       dest: /var/www/html/index/html            
+       dest: /var/www/html/index.html            
